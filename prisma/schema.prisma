@@ -16,3 +16,24 @@ model Review {
   comment   String
   createdAt DateTime @default(now())
 }
+model Question {
+  id          String   @id @default(cuid())
+  title       String
+  body        String
+  authorEmail String
+  authorName  String
+  authorImage String?
+  createdAt   DateTime @default(now())
+  answers     Answer[]
+}
+
+model Answer {
+  id          String   @id @default(cuid())
+  questionId  String
+  body        String
+  authorEmail String
+  authorName  String
+  authorImage String?
+  createdAt   DateTime @default(now())
+  question    Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+}
