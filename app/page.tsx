@@ -6,28 +6,31 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-200">
       
-      {/* 1. COMPANY SECTION (First thing they see) */}
-      <section className="h-screen flex flex-col items-center justify-center px-4 text-center border-b border-slate-800">
-        <div className="mb-6">
+      {/* 1. COMPANY SECTION (Hero) */}
+      <section className="min-h-screen flex flex-col items-center justify-center border-b border-slate-800 overflow-hidden">
+        <div className="w-full mb-8">
           <Image 
             src="/company-logo.png" 
             alt="IntrovertBlasting Corporation" 
-            width={150} 
-            height={150} 
-            className="mx-auto" 
+            width={1920} 
+            height={400} 
+            className="w-full h-auto max-h-[300px] object-contain" 
+            priority
           />
         </div>
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
-          IntrovertBlasting <span className="text-orange-500">Corporation</span>
-        </h1>
-        <p className="text-xl text-slate-400 max-w-2xl mb-8">
-          Innovating security and repurposing technology to give your old devices a second life.
-        </p>
-        <div className="animate-bounce mt-10">
-          <p className="text-sm text-slate-500 mb-2">Scroll to explore our product</p>
-          <svg className="w-6 h-6 mx-auto text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-          </svg>
+        <div className="px-4 text-center">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
+            IntrovertBlasting <span className="text-orange-500">Corporation</span>
+          </h1>
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-8">
+            Innovating security and repurposing technology to give your old devices a second life.
+          </p>
+          <div className="animate-bounce mt-10">
+            <p className="text-sm text-slate-500 mb-2">Scroll to explore our product</p>
+            <svg className="w-6 h-6 mx-auto text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </div>
         </div>
       </section>
 
@@ -44,56 +47,112 @@ export default function Home() {
             />
           </div>
           <h2 className="text-4xl font-bold mb-6 text-white">Second Watch App</h2>
-          <p className="text-lg text-slate-400 mb-8">
-            Turn your old, dusty Android phone into a high-powered CCTV security camera. 
+          <p className="text-lg text-slate-400 mb-8 max-w-3xl mx-auto">
+            Turn your old Android phone (Android 11 or older) into a high-powered DIY CCTV security camera. 
             Our specialized dual-app system lets you stream live video, switch between front and back cameras, 
-            and zoom in remotely from your new phone.
+            and zoom in remotely from your modern phone. No monthly fees, no subscriptions, and no complex setup.
           </p>
           <div className="grid md:grid-cols-2 gap-6 text-left mt-12">
             <div className="bg-slate-800 p-6 rounded-xl border border-slate-700">
-              <h3 className="text-xl font-bold text-orange-400 mb-3">Old Phone App</h3>
+              <h3 className="text-xl font-bold text-orange-400 mb-3">📷 Old Phone App (Camera)</h3>
               <p className="text-slate-300">
-                Optimized for Android 10 and below. Uses minimal battery and resources to keep the camera running 24/7.
+                A lightweight APK built specifically for older Android devices. It turns your old phone into a dedicated 
+                security camera with minimal battery and resource usage. Perfect for repurposing hardware you already own.
               </p>
             </div>
             <div className="bg-slate-800 p-6 rounded-xl border border-slate-700">
-              <h3 className="text-xl font-bold text-orange-400 mb-3">New Phone App</h3>
+              <h3 className="text-xl font-bold text-orange-400 mb-3">📱 New Phone App (Viewer)</h3>
               <p className="text-slate-300">
-                Your command center. Live view, remote camera switching, and pinch-to-zoom functionality.
+                Your command center. Watch the live feed, switch between front and back cameras, and use pinch-to-zoom 
+                on both cameras remotely. Works on any modern Android phone.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. DOWNLOAD & INSTALLATION SECTION */}
-      <section className="py-24 px-4 bg-slate-950">
+      {/* 3. BENEFITS SECTION */}
+      <section className="py-16 px-4 bg-slate-950 border-t border-slate-800">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-12 text-white">Download & Setup Guide</h2>
-          <div className="space-y-6 text-left max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold mb-10 text-white">Why Choose Second Watch?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-slate-900 p-6 rounded-xl border border-slate-800">
+              <div className="text-4xl mb-3">💸</div>
+              <h3 className="text-lg font-bold text-white mb-2">100% Free</h3>
+              <p className="text-slate-400 text-sm">No hidden fees, no subscriptions. Use your existing hardware.</p>
+            </div>
+            <div className="bg-slate-900 p-6 rounded-xl border border-slate-800">
+              <div className="text-4xl mb-3">🔄</div>
+              <h3 className="text-lg font-bold text-white mb-2">Camera Switching</h3>
+              <p className="text-slate-400 text-sm">Switch between front and back cameras instantly from the viewer app.</p>
+            </div>
+            <div className="bg-slate-900 p-6 rounded-xl border border-slate-800">
+              <div className="text-4xl mb-3">🔍</div>
+              <h3 className="text-lg font-bold text-white mb-2">Full Zoom Control</h3>
+              <p className="text-slate-400 text-sm">Zoom in and out on both front and back cameras remotely.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. DOWNLOAD & INSTALLATION SECTION */}
+      <section className="py-24 px-4 bg-slate-900">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-4 text-center text-white">Download & Setup Guide</h2>
+          <p className="text-center text-slate-400 mb-12 max-w-2xl mx-auto">
+            Since Second Watch is distributed outside the Play Store, follow these steps carefully to install and set up your DIY CCTV.
+          </p>
+
+          {/* Download Button */}
+          <div className="text-center mb-12">
+            <a 
+              href="https://drive.google.com/drive/folders/1LQbgKgcKAisbxM6ZnujiM73VRpqP6vVx" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition"
+            >
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>
+              Download APKs from Google Drive
+            </a>
+            <p className="text-xs text-slate-500 mt-2">
+              (Link will open the Google Drive folder containing both APKs)
+            </p>
+          </div>
+          
+          <div className="space-y-6 text-left max-w-3xl mx-auto">
             {[
               { 
                 step: 1, 
-                title: "Download the Apps", 
-                desc: "Get the 'Second Watch (Old Phone)' on your old device and 'Second Watch (Viewer)' on your new phone." 
+                title: "Download the Correct APKs", 
+                desc: "Download the 'Camera' APK for your old phone and the 'Viewer' APK for your new phone. The old phone version is optimized to be lightweight." 
               },
               { 
                 step: 2, 
-                title: "Position the Old Phone", 
-                desc: "Place your old phone where you need surveillance. Make sure it is plugged into a power source." 
+                title: "Allow Installation from Unknown Sources", 
+                desc: "On both phones, go to Settings → Security → Install unknown apps, and allow your file manager or browser to install APKs." 
               },
               { 
                 step: 3, 
-                title: "Open the Old Phone App", 
-                desc: "Launch the app on the old phone. A unique QR code will appear on the screen." 
+                title: "Install the Apps", 
+                desc: "Open the downloaded APK files. If prompted by Play Protect, select 'Install anyway' (don't scan). Complete the installation on both phones." 
               },
               { 
                 step: 4, 
-                title: "Scan and Connect", 
-                desc: "Open the Viewer app on your new phone, scan the QR code, and you are instantly connected." 
+                title: "Set Up Your Camera (Old Phone)", 
+                desc: "Open the app on your old phone and select 'Use as Camera'. The app will display your phone's Wi-Fi IP address." 
+              },
+              { 
+                step: 5, 
+                title: "Connect the Viewer (New Phone)", 
+                desc: "Open the app on your new phone and select 'Use as Viewer'. Enter the IP address shown on the old phone and tap 'Connect'." 
+              },
+              { 
+                step: 6, 
+                title: "Watch the Tutorial", 
+                desc: "For a complete visual walkthrough, watch our YouTube Short below." 
               }
             ].map((item) => (
-              <div key={item.step} className="flex gap-4 items-start bg-slate-900 p-5 rounded-lg border border-slate-800">
+              <div key={item.step} className="flex gap-4 items-start bg-slate-800 p-5 rounded-lg border border-slate-700">
                 <span className="bg-orange-500 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0">
                   {item.step}
                 </span>
@@ -104,16 +163,69 @@ export default function Home() {
               </div>
             ))}
           </div>
+
+          {/* YouTube Embedded Video */}
+          <div className="mt-16 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-center text-white mb-6">📺 Watch the Full Tutorial</h3>
+            <div className="relative w-full aspect-video rounded-xl overflow-hidden border-2 border-slate-700 shadow-2xl">
+              <iframe
+                src="https://www.youtube.com/embed/hfCa5c7y77Q"
+                title="Second Watch Setup Tutorial"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full"
+              ></iframe>
+            </div>
+            <p className="text-center text-slate-500 text-sm mt-4">
+              Having trouble viewing? {" "}
+              <a 
+                href="https://www.youtube.com/shorts/hfCa5c7y77Q" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-orange-500 hover:underline"
+              >
+                Open on YouTube
+              </a>
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* 4. REVIEWS & Q/A BOXES */}
+      {/* 5. REMOTE ACCESS & DISCLAIMER SECTION */}
+      <section className="py-16 px-4 bg-slate-950 border-t border-slate-800">
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-slate-900 p-8 rounded-xl border border-slate-700 mb-8">
+            <h2 className="text-2xl font-bold mb-4 text-white">🌐 Access your camera from a different network</h2>
+            <p className="text-slate-300 mb-4">
+              Second Watch works perfectly on the same Wi-Fi network. If you want to view your camera from a different network (e.g., outside your home), you can use <strong>Tailscale</strong>.
+            </p>
+            <ol className="list-decimal list-inside text-slate-400 space-y-2">
+              <li>Install <strong>Tailscale</strong> from the Play Store on both phones.</li>
+              <li>Log in to the <strong>same Tailscale account</strong> on both devices.</li>
+              <li>Open Tailscale on your old phone and note its assigned IP address.</li>
+              <li>Enter that IP address in the Viewer app on your new phone.</li>
+            </ol>
+          </div>
+
+          <div className="bg-red-900/20 border border-red-800/50 p-6 rounded-xl">
+            <h3 className="text-lg font-bold text-red-400 mb-2 flex items-center gap-2">
+              ⚠️ Disclaimer
+            </h3>
+            <p className="text-slate-300 text-sm">
+              Second Watch is a legitimate security and surveillance tool. It is <strong>not</strong> a hacking application. 
+              Both devices must have the app installed, and the user must explicitly grant camera permissions on the old phone. 
+              Remote access requires both devices to be logged into the same Tailscale account. Use this software responsibly and only on devices you own.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. REVIEWS & Q/A BOXES */}
       <section className="py-24 px-4 bg-slate-900 border-t border-slate-800">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center text-white">Community & Support</h2>
           <div className="grid md:grid-cols-2 gap-8">
             
-            {/* Reviews Box */}
             <Link href="/reviews" className="group">
               <div className="bg-slate-800 p-10 rounded-2xl border border-slate-700 hover:border-orange-500 transition duration-300 h-full flex flex-col items-center text-center">
                 <div className="text-5xl text-yellow-400 mb-4">★★★★★</div>
@@ -127,7 +239,6 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Q/A Forum Box */}
             <Link href="/forum" className="group">
               <div className="bg-slate-800 p-10 rounded-2xl border border-slate-700 hover:border-orange-500 transition duration-300 h-full flex flex-col items-center text-center">
                 <div className="text-5xl text-blue-400 mb-4">💬</div>
