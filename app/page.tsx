@@ -48,23 +48,29 @@ export default function Home() {
           </div>
           <h2 className="text-4xl font-bold mb-6 text-white">Second Watch App</h2>
           <p className="text-lg text-slate-400 mb-8 max-w-3xl mx-auto">
-            Turn your old Android phone (Android 11 or older) into a high-powered DIY CCTV security camera. 
+            Turn your Android phone (Android 11 or newer) into a high-powered DIY CCTV security camera. 
             Our specialized dual-app system lets you stream live video, switch between front and back cameras, 
             and zoom in remotely from your modern phone. No monthly fees, no subscriptions, and no complex setup.
           </p>
           <div className="grid md:grid-cols-2 gap-6 text-left mt-12">
             <div className="bg-slate-800 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-bold text-orange-400 mb-3">📷 Old Phone App (Camera)</h3>
-              <p className="text-slate-300">
-                A lightweight APK built specifically for older Android devices. It turns your old phone into a dedicated 
-                security camera with minimal battery and resource usage. Perfect for repurposing hardware you already own.
+              <p className="text-slate-300 mb-3">
+                A lightweight APK built specifically for older hardware running Android 11 or newer. It turns your old phone 
+                into a dedicated security camera with minimal battery and resource usage.
+              </p>
+              <p className="text-sm text-slate-400">
+                <strong className="text-orange-400">APK:</strong> <code className="bg-slate-900 px-2 py-1 rounded">app-armeabi-v7a-release.apk</code>
               </p>
             </div>
             <div className="bg-slate-800 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-bold text-orange-400 mb-3">📱 New Phone App (Viewer)</h3>
-              <p className="text-slate-300">
+              <p className="text-slate-300 mb-3">
                 Your command center. Watch the live feed, switch between front and back cameras, and use pinch-to-zoom 
-                on both cameras remotely. Works on any modern Android phone.
+                on both cameras remotely.
+              </p>
+              <p className="text-sm text-slate-400">
+                <strong className="text-orange-400">APK:</strong> <code className="bg-slate-900 px-2 py-1 rounded">app-arm64-v8a-release.apk</code>
               </p>
             </div>
           </div>
@@ -124,7 +130,7 @@ export default function Home() {
               { 
                 step: 1, 
                 title: "Download the Correct APKs", 
-                desc: "Download the 'Camera' APK for your old phone and the 'Viewer' APK for your new phone. The old phone version is optimized to be lightweight." 
+                desc: "Download 'app-armeabi-v7a-release.apk' for your old phone (Camera) and 'app-arm64-v8a-release.apk' for your new phone (Viewer)." 
               },
               { 
                 step: 2, 
