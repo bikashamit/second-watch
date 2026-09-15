@@ -112,7 +112,7 @@ export default function Home() {
           {/* Download Button */}
           <div className="text-center mb-12">
             <a 
-              href="https://drive.google.com/drive/folders/1LQbgKgcKAisbxM6ZnujiM73VRpqP6vVx" 
+              href="https://drive.google.com/drive/folders/1LQbgKgcKAisbxM6ZnujiM73VRpqP6vVx?usp=sharing" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition"
